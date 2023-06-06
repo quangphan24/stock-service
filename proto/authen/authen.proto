@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package authen;
+option go_package = "stock-service/authen/proto";
+
+message String {
+  string value = 1;
+}
+message Bool{
+  bool value = 1;
+}
+
+service AuthenService {
+  rpc VerifyToken(String) returns (Bool);
+}

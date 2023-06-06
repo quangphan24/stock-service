@@ -1,0 +1,17 @@
+syntax = "proto3";
+package stock;
+option go_package = "stock-service/stock/proto";
+
+
+message ProductReply {
+  int64 id = 1;
+  string name = 2;
+  int64 quantity = 3;
+  int64 price  = 4;
+}
+message Int {
+  int64 value =1;
+}
+service StockService {
+  rpc GetProductById(Int) returns (ProductReply);
+}
