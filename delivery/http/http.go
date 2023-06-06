@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"stock-service/delivery/http/healthcheck"
 	"stock-service/delivery/http/product"
+	middleware2 "stock-service/middleware"
 	"stock-service/usecase"
 )
 
